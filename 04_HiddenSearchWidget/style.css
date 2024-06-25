@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Questrial&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Questrial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(90deg, #7d5fff, #7158e2);
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+.input-group {
+    position: relative;
+    height: 50px;
+}
+.input-group input {
+    border: 0;
+    outline: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 15px;
+    color: #111;
+    font-size: 18px;
+    height: 50px;
+    width: 50px;
+    transition: width 0.3s ease;
+    background-color: #fff;
+}
+.btn {
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3 ease; 
+    border-radius: 5px;
+}
+.btn:focus,
+input:focus {
+    outline: none;
+}
+.input-group.active input {
+    width: 200px;
+}
+.input-group.active .btn {
+    transform: translateX(198px);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; 
+}
